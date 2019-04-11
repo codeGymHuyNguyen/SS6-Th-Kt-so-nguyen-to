@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHeck Prime Number</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let check = true;
+        let result = '';
+        if (number === 1) {
+            check = false;
+        }
+        for (let i = 2; i <= number/2; i++) {
+            if (number % i === 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            result= number + ' is a prime number.';
+        } else {
+            result= number + ' is NOT a prime number.';
+        }
+        return result;
+    }
+    let inputNumber = parseInt(prompt('Input number:'));
+    let alertResult = isPrime(inputNumber);
+    alert(alertResult);
+
+</script>
+</body>
+</html>
